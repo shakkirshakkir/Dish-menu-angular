@@ -1,0 +1,41 @@
+<p>detail works!</p>
+
+<h1 class="bg-dark text-light text-center">{{dish.dish}}</h1>
+
+<div class="row">
+<div class="col-4"></div>
+<div class="col-4">
+    
+    
+        <div class="card" *ngIf="dish" style="width: 18rem;">
+            <img class="card-img-top" src="{{dish.image}}" alt="card image">
+            <div class="card-body">
+              <h5 class="card-title">{{dish.dish|uppercase}}</h5>
+              <!-- <p class="card-text">{{dish.id}}</p> -->
+              <h6 class="card-subtitle mb-2 text-muted">{{dish.category|uppercase}}</h6>
+              <p class="card-text"><b>AMOUNT</b>{{dish.price|currency:'INR'}}</p>
+              <!-- <p class="card-text"><b>RATING:</b>{{dish.rating}}</p> -->
+              <!-- <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a> -->
+              <div class="card-footer">
+                <div class="bg-warning mb-3" *ngFor="let i of review">
+                    <h5 class="card-title"><b>REVIEW:</b>{{i.review|uppercase}}</h5>
+              <!-- <p class="card-text">{{dish.id}}</p> -->
+             
+              <p class="card-text"><b>RATING:</b>{{i.rating}}</p>
+              
+              <p class="justify-content-end"><b>USER:</b>{{i.user.username}}</p>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+    
+      
+    
+    
+    
+<div class="col-4">
+  
+</div>
+</div>

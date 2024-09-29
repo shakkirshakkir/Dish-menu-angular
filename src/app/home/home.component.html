@@ -1,0 +1,21 @@
+<p>home works!</p>
+<h1 class="bg-warning text-center">Paragon Restaurent</h1>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div>
+                <label for="">Username</label>
+                <input type="text" formControlName="username" class="form-control">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" formControlName="password" class="form-control">
+            </div><br>
+            <div class="text-center">
+                <button class="btn btn-success" >Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
